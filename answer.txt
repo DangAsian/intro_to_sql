@@ -1,0 +1,25 @@
+SElECT * FROM robots WHERE (source = 'Star Wars'); => C3PO, and R2D2
+SELECT name FROM robots WHERE (personality = 'anxious'); C3PO
+SELECT * FROM recipes WHERE (nut_free = true);
+SELECT COUNT(name) FROM recipes WHERE (gluten_free = true AND vegetarian = false); => Juicy Roasted Chicken, and Stout Slow Cooker Corned Beef and Veggies
+SELECT name, number_of_legs FROM animals WHERE(number_of_legs=(SELECT MAX(number_of_legs) FROM animals)); => Octopus
+
+SELECT name, mins_to_play FROM board_games WHERE(mins_to_play=(SELECT MIN(mins_to_play) FROM board_games)); => Sushi GO AND Quixo
+
+SELECT name, minutes_required FROM recipes WHERE(minutes_required=(SELECT MIN(minutes_required) FROM recipes)); => Vietnamese Rice-Noodle-Salad
+
+SELECT name FROM robots WHERE name LIKE 'M%'; => Marvin AND Mr. Butlertron
+
+SELECT COUNT(name) FROM board_games WHERE min_players >= 8 OR max_players >= 8; 3
+
+SELECT name, swimming, egg_laying, flying FROM animals WHERE swimming = true AND egg_laying = true AND flying = false; => octopus
+
+SELECT name FROM board_games WHERE(max_players=(SELECT MAX(max_players) FROM board_games)); => Cards Against Humanity
+
+
+           
+
+
+	
+
+
